@@ -36,7 +36,7 @@ export default function MainNav() {
           </div>
           <div className="flex flex-col">
             <span className="text-[#512D6D] font-black text-lg md:text-xl leading-none tracking-tighter uppercase">Sonaimuri</span>
-            <span className="text-[8px] md:text-[9px] text-gray-500 font-bold tracking-widest uppercase">Ma O Shishu Hospital (Pvt.)</span>
+            <span className="text-[8px] md:text-[9px] text-gray-500 font-bold tracking-widest uppercase">Maa O Shishu Hospital (Pvt.)</span>
           </div>
         </Link>
 
