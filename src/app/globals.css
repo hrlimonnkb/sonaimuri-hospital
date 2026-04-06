@@ -7,8 +7,6 @@
   }
 }
 
-/* src/app/globals.css */
-
 @layer utilities {
   /* Hero Slider Animations */
   @keyframes slow-zoom {
@@ -42,6 +40,7 @@
     z-index: 50 !important;
     display: flex !important;
     gap: 12px !important;
+    pointer-events: auto !important;
   }
 
   /* Target the bullets created by Swiper */
