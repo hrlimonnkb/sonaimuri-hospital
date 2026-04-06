@@ -40,7 +40,7 @@ const highlights = [
 
 export default function ServiceHighlights() {
   return (
-    <section className="relative -mt-16 z-40 pb-20 px-5">
+    <section className="relative mt-0 sm:-mt-16 z-40 pb-20 pt-10 sm:pt-0 px-5">
       <div className="max-width-wrapper">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item) => (

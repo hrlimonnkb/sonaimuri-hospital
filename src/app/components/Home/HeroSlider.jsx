@@ -57,7 +57,7 @@ export default function HeroSlider() {
   className="h-full group"
 >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="relative h-full w-full">
+          <SwiperSlide key={slide.id} className="relative h-full w-full px-5">
             {/* 1. Background Image with DEEPER Overlays */}
             <div className="absolute inset-0 z-0">
               <Image
