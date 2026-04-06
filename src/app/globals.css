@@ -1,2 +1,66 @@
 @import "tailwindcss";
 
+@layer components {
+  /* This only handles centering and the top limit */
+  .max-width-wrapper {
+    @apply max-w-7xl mx-auto w-full;
+  }
+}
+
+/* src/app/globals.css */
+
+@layer utilities {
+  /* Hero Slider Animations */
+  @keyframes slow-zoom {
+    from { transform: scale(1.05); }
+    to { transform: scale(1.15); }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes titleGrow {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slow-zoom { animation: slow-zoom 20s infinite alternate linear; }
+  .animate-fade-in-down { animation: fadeInDown 0.8s forwards; }
+  .animate-title-grow { animation: titleGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+  .animate-fade-in-up { animation: fadeInUp 0.8s forwards 0.4s; }
+  .animate-fade-in-up-delay { animation: fadeInUp 0.8s forwards 0.6s; }
+
+  /* Custom Swiper Pagination Bars */
+  .custom-pagination {
+    z-index: 50 !important;
+    display: flex !important;
+    gap: 12px !important;
+  }
+
+  /* Target the bullets created by Swiper */
+  .custom-pagination .swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.3 !important;
+    width: 30px !important;
+    height: 4px !important;
+    border-radius: 0 !important;
+    transition: all 0.5s ease !important;
+    margin: 0 !important;
+    cursor: pointer;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    width: 80px !important;
+    background: #D3BFDF !important;
+  }
+
+}
+
