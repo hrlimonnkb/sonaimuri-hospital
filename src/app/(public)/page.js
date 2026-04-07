@@ -1,6 +1,7 @@
 // src/app/(public)/page.js
 
 import AboutUs from "../components/Home/AboutUs";
+import BlogSection from "../components/Home/BlogSection";
 import DoctorsSection from "../components/Home/DoctorsSection";
 import HeroSlider from "../components/Home/HeroSlider";
 import PatientReviews from "../components/Home/PatientReviews";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <DoctorsSection/>
       <WhyChooseUs/>
       <PatientReviews/>
+      <BlogSection/>
     </div>
   );
 }
