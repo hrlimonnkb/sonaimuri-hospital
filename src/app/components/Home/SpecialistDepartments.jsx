@@ -62,7 +62,7 @@ export default function SpecialistDepartments() {
               </h3>
 
               {/* Arrow Button Indicator */}
-              <div className="mt-auto w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#916BBF] group-hover:bg-[#916BBF] group-hover:text-white transition-all duration-300 transform group-hover:rotate-[-45deg]">
+              <div className="mt-auto w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#916BBF] group-hover:bg-[#916BBF] group-hover:text-white transition-all duration-300 transform group-hover:-rotate-45">
                 <HiOutlineArrowRight className="text-lg" />
               </div>
             </Link>
