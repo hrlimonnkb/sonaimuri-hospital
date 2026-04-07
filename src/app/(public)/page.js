@@ -3,6 +3,7 @@
 import AboutUs from "../components/Home/AboutUs";
 import HeroSlider from "../components/Home/HeroSlider";
 import ServiceHighlights from "../components/Home/ServiceHighlights";
+import SpecialistDepartments from "../components/Home/SpecialistDepartments";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HeroSlider />
       <ServiceHighlights/>
       <AboutUs/>
+      <SpecialistDepartments/>
     </div>
   );
 }

@@ -62,7 +62,7 @@ export default function AboutUs() {
 
             {/* Legacy Badge */}
             <div className="absolute -top-6 -left-6 bg-linear-to-br from-[#512D6D] to-[#916BBF] text-white p-6 rounded-2xl shadow-xl z-30 transform -rotate-3 hover:rotate-0 transition-transform cursor-default">
-              <div className="text-3xl font-black italic tracking-tighter leading-none">Since 1984</div>
+              <div className="text-3xl font-black italic tracking-tighter leading-none">Since 2025</div>
               <p className="text-[10px] uppercase font-bold tracking-widest mt-1 opacity-80">Serving Humanity</p>
             </div>
           </div>
