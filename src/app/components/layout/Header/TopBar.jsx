@@ -1,4 +1,5 @@
 // src/components/layout/Header/TopBar.jsx
+import Link from 'next/link';
 import { FaPhoneAlt, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function TopBar() {
@@ -8,7 +9,7 @@ export default function TopBar() {
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-2">
             <FaPhoneAlt className="text-[#D3BFDF] text-[10px]" /> 
-            Emergency: <span className="font-bold">+880 1XXX-XXXXXX</span>
+            Emergency: <Link href="tel:01705319271" className="font-bold">+8801705-319271</Link>
           </span>
           <span className="flex items-center gap-2 border-l border-white/20 pl-6">
             <FaClock className="text-[#D3BFDF]" /> 24 Hours Open

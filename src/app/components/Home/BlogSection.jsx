@@ -40,7 +40,7 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-24  relative px-5">
       <div className="max-width-wrapper">
         
         {/* Section Header */}

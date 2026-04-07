@@ -1,5 +1,6 @@
 // src/app/(public)/layout.js
 
+import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 
 export default function PublicLayout({ children }) {
@@ -7,6 +8,7 @@ export default function PublicLayout({ children }) {
     <>
       <Header />
       <main>{children}</main>
+      <Footer/>
     </>
   );
 }

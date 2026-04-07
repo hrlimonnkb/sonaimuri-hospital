@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HiOutlineArrowRight, HiMenu, HiX } from 'react-icons/hi';
-import { RiUserSmileLine, RiDashboardFill, RiLogoutCircleRLine } from 'react-icons/ri';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import logoImage from "@/assets/images/logo.png";
 
