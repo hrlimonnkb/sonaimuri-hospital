@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaHospitalAlt, FaRegCalendarAlt, FaUserMd } from 'react-icons/fa';
+import doctorRasul from "@/assets/images/rasul.png";    
+import doctorSaiful from "@/assets/images/saiful.png";
+import doctorKhadija from "@/assets/images/khadija.jpeg";
 
 const doctors = [
   {
@@ -12,8 +15,8 @@ const doctors = [
     department: "Cardiology",
     designation: "MBBS (Dhaka), BCS (Health), MD (Cardiology), FSCAI (USA). Clinical & Interventional Cardiologist. Associate Professor (Cardiology Dept.), PG Hospital, Dhaka.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Every Friday | 7:00 PM - 10:00 PM",
-    image: "/images/doctor-rasul.jpg",
+    schedule: "Every Friday | 3:00 PM - 8:00 PM",
+    image: doctorRasul,
   },
   {
     id: 2,
@@ -21,7 +24,7 @@ const doctors = [
     department: "Gynecology & Obs.",
     designation: "MBBS, BCS (Health), DGO, FCPS (Gynecology). Assistant Professor & Head of Dept. (Gynecology), Shaheed Suhrawardy Medical College & Hospital, Dhaka.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Every Friday | 4:00 PM - 8:00 PM",
+    schedule: "Every Friday | 3:00 PM - 8:00 PM",
     image: "/images/doctor-toufika.jpg",
   },
   {
@@ -30,27 +33,27 @@ const doctors = [
     department: "Internal Medicine",
     designation: "MBBS (CMC), BCS (FP), FCPS (Final Part, Med), MRCP (UK). PGT in Pediatrics. Medical Officer, MCH Center, Lakshmipur.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Fri, Sat, Sun, Tue, Thu (10 AM - 7 PM) | Mon, Wed (3 PM - 9 PM)",
+    schedule: "Everyday",
     image: "/images/doctor-asaduzzaman.jpg",
   },
   
   {
     id: 4,
-    name: "Dr. Nafiz Imtiaz Uddin",
-    department: "Pediatric Surgery",
-    designation: "MBBS (Dhaka), MS, FCPS (Health), Pediatric Surgeon. Expert in complex neonatal surgeries.",
+    name: "Dr. Md. Saiful Islam",
+    department: "Gynecology",
+    designation: "MBBS, BCS (Health), MD (Physical Medicine & Rehab - BSMMU), FCPS (Medicine-part), CCD (BIRDEM). Consultant, Physical Medicine & Rehabilitation Dept., Noakhali.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Mon, Wed, Fri | 3:00 PM - 7:00 PM",
-    image: "/images/doctor-placeholder.jpg",
+    schedule: "Every Thursday | 2:00 PM - 8:00 PM",
+    image: doctorSaiful,
   },
   {
     id: 5,
-    name: "Dr. A K M Golam Samdani",
-    department: "Neonatology",
-    designation: "MBBS (Dhaka), BCS (Health), DCH (BSMMU), MD (Neonatology). NICU Specialist.",
+    name: "Dr. Khadija Akter Shuvo",
+    department: "Gynecology & Sonology",
+    designation: "MBBS (Khulna Medical College), CMU (Ultrasonography), PGT (Gynae). BM&DC: A-145671. Experienced in Mother & Child diseases. Specially trained in Normal Delivery.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Sat, Mon, Wed | 4:00 PM - 8:00 PM",
-    image: "/images/doctor-placeholder.jpg",
+    schedule: "Everyday",
+    image: doctorKhadija,
   },
   {
     id: 6,
