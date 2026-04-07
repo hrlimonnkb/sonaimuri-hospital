@@ -61,5 +61,23 @@
     background: #D3BFDF !important;
   }
 
+  /* Review Pagination */
+  .review-pagination .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background: #D3BFDF !important;
+    opacity: 0.4 !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 50% !important;
+    margin: 0 !important;
+    cursor: pointer;
+  }
+  .review-pagination .swiper-pagination-bullet-active {
+    width: 32px !important;
+    background: #512D6D !important;
+    opacity: 1 !important;
+    border-radius: 10px !important;
+  }
+
 }
 

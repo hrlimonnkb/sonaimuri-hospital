@@ -3,6 +3,7 @@
 import AboutUs from "../components/Home/AboutUs";
 import DoctorsSection from "../components/Home/DoctorsSection";
 import HeroSlider from "../components/Home/HeroSlider";
+import PatientReviews from "../components/Home/PatientReviews";
 import ServiceHighlights from "../components/Home/ServiceHighlights";
 import SpecialistDepartments from "../components/Home/SpecialistDepartments";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <SpecialistDepartments/>
       <DoctorsSection/>
       <WhyChooseUs/>
+      <PatientReviews/>
     </div>
   );
 }
