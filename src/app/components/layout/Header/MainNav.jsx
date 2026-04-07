@@ -15,7 +15,7 @@ const SERVICES_LIST = [
 ];
 
 export default function MainNav() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -72,11 +72,11 @@ export default function MainNav() {
         {/* --- ACTIONS --- */}
         <div className="flex items-center gap-2 md:gap-4">
           <Link href="/appointment" className="hidden sm:flex bg-[#512d6d] text-white px-5 py-2.5 rounded-md text-[12px] font-bold items-center gap-2 hover:bg-[#35055a] shadow-md shadow-purple-100 transition-all">
-            APPOINTMENT <HiOutlineArrowRight />
+            BOOK APPOINTMENT <HiOutlineArrowRight />
           </Link>
 
           {/* User Profile */}
-          <div className="relative">
+          {/* <div className="relative">
             <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-full p-1 pr-3">
               <div className="w-8 h-8 rounded-full bg-[#D3BFDF] flex items-center justify-center text-[#512D6D]"><RiUserSmileLine className="text-lg" /></div>
               <span className="text-[12px] font-bold text-gray-700 hidden md:block">Shawon.</span>
@@ -92,7 +92,7 @@ export default function MainNav() {
                 </button>
               </div>
             )}
-          </div>
+          </div> */}
 
           {/* Hamburger (Mobile Only) */}
           <button className="lg:hidden text-2xl text-[#512D6D] p-2" onClick={() => setIsMobileMenuOpen(true)}>

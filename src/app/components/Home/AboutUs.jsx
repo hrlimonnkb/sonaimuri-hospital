@@ -38,7 +38,7 @@ export default function AboutUs() {
   return (
     <section className="py-24 bg-[#FAFAFE] relative px-5">
       <div className="max-width-wrapper">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           
           {/* LEFT: The "Visionary" Image Layout */}
           <div className="flex-1 relative w-full group">
@@ -84,7 +84,7 @@ export default function AboutUs() {
             </div>
 
             {/* Unique Vertical Feature Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {clinicalFeatures.map((item) => (
                 <div key={item.id} className="p-5 rounded-2xl bg-white border-b-4 border-transparent hover:border-[#916BBF] shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="text-[#512D6D] text-2xl mb-3">{item.icon}</div>
