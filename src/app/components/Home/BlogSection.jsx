@@ -3,8 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiOutlineCalendar, HiOutlineUser, HiOutlineArrowRight } from 'react-icons/hi';
+import EssentialNutrition from "@assets/images/Essential_Nutrition.jpeg";
+import newbornSleep from "@assets/images/Newborn_sleep_patterns.jpeg";
+import childhoodVaccinations from "@assets/images/Timely_childhood_vaccination.jpeg";
 
-// STATIC DATA: Replace this array with an API call in the future
 const blogPosts = [
   {
     id: 1,
@@ -13,7 +15,7 @@ const blogPosts = [
     category: "Maternity",
     date: "April 12, 2026",
     author: "Dr. Toufika Ahmed",
-    image: "/images/blog-1.jpg",
+    image: EssentialNutrition,
     slug: "/blog/essential-nutrition-expectant-mothers"
   },
   {
@@ -23,7 +25,7 @@ const blogPosts = [
     category: "Pediatrics",
     date: "April 05, 2026",
     author: "Dr. A K M Golam Samdani",
-    image: "/images/blog-2.jpg",
+    image: newbornSleep,
     slug: "/blog/understanding-newborn-sleep"
   },
   {
@@ -33,7 +35,7 @@ const blogPosts = [
     category: "Child Health",
     date: "March 28, 2026",
     author: "Admin",
-    image: "/images/blog-3.jpg",
+    image: childhoodVaccinations,
     slug: "/blog/importance-of-childhood-vaccinations"
   }
 ];

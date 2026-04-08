@@ -6,7 +6,8 @@ import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaHospitalAlt, FaRegCalendarAlt, FaUserMd } from 'react-icons/fa';
 import doctorRasul from "@/assets/images/rasul.png";    
 import doctorSaiful from "@/assets/images/saiful.png";
-import doctorKhadija from "@/assets/images/khadija.jpeg";
+import doctorKhadija from "@/assets/images/khadija.png";
+import doctorAhsan from "@/assets/images/ahsan-habib.png";
 
 const doctors = [
   {
@@ -57,12 +58,12 @@ const doctors = [
   },
   {
     id: 6,
-    name: "Dr. Salma Begum",
-    department: "Pediatrics",
-    designation: "MBBS, DCH, MCPS (Pediatrics), Child Specialist. Dedicated to comprehensive child care.",
+    name: "Dr. Ahsan Habib (BPT)",
+    department: "Physiotherapy",
+    designation: "BPT. Physiotherapy Specialist (Arthritis, Pain & Paralysis). Consultant at Sonaimuri Maa O Shishu Hospital Physiotherapy Unit and other care centers.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Sun, Wed, Thu | 9:00 AM - 1:00 PM",
-    image: "/images/doctor-placeholder.jpg",
+    schedule: "Everyday",
+    image: doctorAhsan,
   }
 ];
 

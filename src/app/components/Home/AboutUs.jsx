@@ -79,7 +79,7 @@ export default function AboutUs() {
                 <span className="text-[#916BBF]">For Mothers & Children</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-                At Sonaimuri Ma O Shishu Hospital (Pvt.), our journey is defined by the smiles of healthy mothers and thriving children. We bridge the gap between advanced medical technology and heart-touching compassion, ensuring that high-quality maternity and pediatric care is never out of reach.
+                At Sonaimuri Maa O Shishu Hospital (Pvt.), our journey is defined by the smiles of healthy mothers and thriving children. We bridge the gap between advanced medical technology and heart-touching compassion, ensuring that high-quality maternity and pediatric care is never out of reach.
               </p>
             </div>
 
