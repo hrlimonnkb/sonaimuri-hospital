@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HiOutlineArrowRight, HiMenu, HiX } from 'react-icons/hi';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import logoImage from "@/assets/images/logo.png";
 
 const SERVICES_LIST = [
@@ -14,16 +13,11 @@ const SERVICES_LIST = [
 ];
 
 export default function MainNav() {
-  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   const closeMenus = () => {
     setIsMobileMenuOpen(false);
-    setIsMobileServicesOpen(false);
   };
-
   return (
     <nav className="bg-white shadow-sm py-3 px-5 sticky top-0 z-100">
       <div className="max-width-wrapper flex justify-between items-center">
@@ -43,34 +37,14 @@ export default function MainNav() {
         <div className="hidden lg:flex items-center gap-8 font-bold text-[13px] text-gray-600">
           <Link href="/" className="hover:text-[#512D6D]">HOME</Link>
           <Link href="/doctors" className="hover:text-[#512D6D]">DOCTORS</Link>
-          
-          {/* Desktop Services Dropdown */}
-          <div 
-            className="relative group cursor-pointer"
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}
-          >
-            <div className="flex items-center gap-1 hover:text-[#512D6D] py-2">
-              SERVICES {isServicesOpen ? <IoIosArrowUp className="text-[10px]" /> : <IoIosArrowDown className="text-[10px]" />}
-            </div>
-            {isServicesOpen && (
-              <div className="absolute left-0 w-48 bg-white border border-gray-100 shadow-xl rounded-lg p-2 animate-in fade-in slide-in-from-top-2">
-                {SERVICES_LIST.map((service) => (
-                  <Link key={service.name} href={service.href} className="block p-3 text-xs hover:bg-[#F3E8FF] hover:text-[#512D6D] rounded-md transition-all">
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
+          <Link href="/departments" className="hover:text-[#512D6D] transition-colors">DEPARTMENTS</Link>
           <Link href="/about" className="hover:text-[#512D6D]">ABOUT</Link>
           <Link href="/contact" className="hover:text-[#512D6D]">CONTACT</Link>
         </div>
 
         {/* --- ACTIONS --- */}
         <div className="flex items-center gap-2 md:gap-4">
-          <Link href="/appointment" className="hidden sm:flex bg-[#512d6d] text-white px-5 py-2.5 rounded-md text-[12px] font-bold items-center gap-2 hover:bg-[#35055a] shadow-md shadow-purple-100 transition-all">
+          <Link href="tel:+8801705319271" className="hidden sm:flex bg-[#512d6d] text-white px-5 py-2.5 rounded-md text-[12px] font-bold items-center gap-2 hover:bg-[#35055a] shadow-md shadow-purple-100 transition-all">
             BOOK APPOINTMENT <HiOutlineArrowRight />
           </Link>
 
@@ -117,28 +91,11 @@ export default function MainNav() {
           <div className="flex flex-col gap-5 font-bold text-gray-600 text-sm">
             <Link href="/" onClick={closeMenus}>HOME</Link>
             <Link href="/doctors" onClick={closeMenus}>DOCTORS</Link>
-            
-            {/* Mobile Services Accordion */}
-            <div>
-              <button 
-                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="flex items-center justify-between w-full text-left"
-              >
-                SERVICES {isMobileServicesOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
-              </button>
-              {isMobileServicesOpen && (
-                <div className="mt-3 ml-4 flex flex-col gap-4 border-l-2 border-[#D3BFDF] pl-4 font-medium text-gray-500">
-                  {SERVICES_LIST.map(service => (
-                    <Link key={service.name} href={service.href} onClick={closeMenus}>{service.name}</Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
+            <Link href="/departments" onClick={closeMenus} className="hover:text-[#512D6D] transition-colors">DEPARTMENTS</Link>
             <Link href="/about" onClick={closeMenus}>ABOUT US</Link>
             <Link href="/contact" onClick={closeMenus}>CONTACT</Link>
             <hr className="my-4 border-[#D3BFDF]" />
-            <Link href="/appointment" className="bg-[#512d6d] text-white p-4 rounded-lg text-center shadow-lg shadow-purple-100" onClick={closeMenus}>
+            <Link href="tel:+8801705319271" className="bg-[#512d6d] text-white p-4 rounded-lg text-center shadow-lg shadow-purple-100" onClick={closeMenus}>
               BOOK APPOINTMENT
             </Link>
           </div>

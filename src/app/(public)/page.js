@@ -1,13 +1,13 @@
 // src/app/(public)/page.js
 
-import AboutUs from "../components/Home/AboutUs";
+import AboutUs from "../components/Shared/AboutUs";
 import BlogSection from "../components/Home/BlogSection";
 import DoctorsSection from "../components/Home/DoctorsSection";
 import HeroSlider from "../components/Home/HeroSlider";
-import PatientReviews from "../components/Home/PatientReviews";
 import ServiceHighlights from "../components/Home/ServiceHighlights";
 import SpecialistDepartments from "../components/Home/SpecialistDepartments";
-import WhyChooseUs from "../components/Home/WhyChooseUs";
+import PatientReviews from "../components/Shared/PatientReviews";
+import WhyChooseUs from "../components/Shared/WhyChooseUs";
 
 export default function HomePage() {
   return (

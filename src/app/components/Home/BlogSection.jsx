@@ -115,14 +115,14 @@ export default function BlogSection() {
         </div>
 
         {/* 'View All' CTA Button */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Link 
             href="/blog"
             className="inline-flex items-center gap-2 bg-[#512D6D] text-white px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#35055a] transition-colors shadow-lg hover:shadow-xl"
           >
             READ MORE ARTICLES <HiOutlineArrowRight className="text-xl" />
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </section>

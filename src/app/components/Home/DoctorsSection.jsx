@@ -1,13 +1,14 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiOutlineArrowRight } from 'react-icons/hi';
 import { FaHospitalAlt, FaRegCalendarAlt, FaUserMd } from 'react-icons/fa';
-import doctorRasul from "@/assets/images/rasul.png";    
+import doctorRasul from "@/assets/images/rasul.png";   
+import doctorAsad from "@/assets/images/asaduzzaman.png"; 
 import doctorSaiful from "@/assets/images/saiful.png";
 import doctorKhadija from "@/assets/images/khadija.png";
 import doctorAhsan from "@/assets/images/ahsan-habib.png";
+import AppointmentModal from '../Shared/AppointmentModal';
 
 const doctors = [
   {
@@ -34,8 +35,8 @@ const doctors = [
     department: "Internal Medicine",
     designation: "MBBS (CMC), BCS (FP), FCPS (Final Part, Med), MRCP (UK). PGT in Pediatrics. Medical Officer, MCH Center, Lakshmipur.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Everyday",
-    image: "/images/doctor-asaduzzaman.jpg",
+    schedule: "Everyday | 10:00 AM - 8:00 PM",
+    image: doctorAsad,
   },
   
   {
@@ -53,7 +54,7 @@ const doctors = [
     department: "Gynecology & Sonology",
     designation: "MBBS (Khulna Medical College), CMU (Ultrasonography), PGT (Gynae). BM&DC: A-145671. Experienced in Mother & Child diseases. Specially trained in Normal Delivery.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Everyday",
+    schedule: "Everyday | 10:00 AM - 8:00 PM",
     image: doctorKhadija,
   },
   {
@@ -62,12 +63,14 @@ const doctors = [
     department: "Physiotherapy",
     designation: "BPT. Physiotherapy Specialist (Arthritis, Pain & Paralysis). Consultant at Sonaimuri Maa O Shishu Hospital Physiotherapy Unit and other care centers.",
     hospital: "Sonaimuri Maa O Shishu Hospital",
-    schedule: "Everyday",
+    schedule: "Everyday | 10:00 AM - 8:00 PM",
     image: doctorAhsan,
   }
 ];
 
 export default function DoctorsSection() {
+  const [activeDoctor, setActiveDoctor] = useState(null);
+  const closeModal = () => setActiveDoctor(null);
   return (
     <section className="py-24 bg-[#FAFAFE] relative px-5">
       <div className="max-width-wrapper">
@@ -139,28 +142,31 @@ export default function DoctorsSection() {
 
               {/* Appointment Button */}
               <div className="mt-auto">
-                <Link 
-                  href={`/appointment?doctor=${doctor.id}`} 
-                  className="w-full flex items-center justify-center gap-2 bg-[#F3E8FF] text-[#512D6D] py-3.5 rounded-xl font-bold text-sm transition-all hover:bg-[#512D6D] hover:text-white"
+                <button 
+                  onClick={() => setActiveDoctor(doctor)} 
+                  className="w-full flex items-center justify-center gap-2 bg-[#F3E8FF] text-[#512D6D] py-3.5 rounded-xl font-bold text-sm transition-all hover:bg-[#512D6D] hover:text-white cursor-pointer"
                 >
                   BOOK AN APPOINTMENT
-                </Link>
+                </button>
               </div>
             </div>
           ))}
         </div>
 
         {/* 'Show More' CTA Button */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Link 
             href="/doctors"
             className="inline-flex items-center gap-2 bg-[#512D6D] text-white px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#35055a] transition-colors shadow-lg hover:shadow-xl"
           >
             SHOW MORE DOCTORS <HiOutlineArrowRight className="text-xl" />
           </Link>
-        </div>
-
+        </div> */}
       </div>
+      <AppointmentModal 
+        doctor={activeDoctor} 
+        onClose={closeModal} 
+      />
     </section>
   );
 }

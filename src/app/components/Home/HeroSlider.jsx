@@ -36,7 +36,7 @@ const slides = [
 
 export default function HeroSlider() {
   return (
-    <section className="relative h-125 md:h-150 lg:h-[calc(100vh-140px)] w-full overflow-hidden bg-[#2d1244]">
+    <section className="relative h-125 md:h-150 lg:h-180 w-full overflow-hidden bg-[#2d1244]">
       <Swiper
   effect={"fade"}
   speed={1000}
@@ -98,7 +98,7 @@ export default function HeroSlider() {
                     href={slide.buttonLink}
                     className="w-full sm:w-auto bg-[#512d6d] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg font-black text-xs md:text-sm transition-all hover:bg-[#35055a] shadow-2xl flex items-center justify-center gap-2"
                   >
-                    EXPLORE SERVICES <HiOutlineArrowRight />
+                    EXPLORE DEPARTMENTS <HiOutlineArrowRight />
                   </Link>
 
                   <Link

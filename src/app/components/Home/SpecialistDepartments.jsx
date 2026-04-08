@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { HiOutlineArrowRight } from 'react-icons/hi';
 import { 
   FaFemale, 
@@ -8,24 +8,24 @@ import {
   FaHeartbeat, 
   FaStethoscope, 
   FaBone, 
-  FaEye, 
-  FaTooth, 
-  FaBrain,
-  FaLungs,
-  FaMicroscope
+  FaProcedures,
+  FaChild,
+  FaAllergies,
+  FaUserMd,
+  FaTint
 } from 'react-icons/fa';
 
 const departments = [
-  { id: 1, name: "Gynecology & Obs.", icon: <FaFemale />, link: "/departments/gynecology" },
-  { id: 2, name: "Neonatology (NICU)", icon: <FaBaby />, link: "/departments/neonatology" },
-  { id: 3, name: "Pediatrics", icon: <FaStethoscope />, link: "/departments/pediatrics" },
-  { id: 4, name: "Cardiology", icon: <FaHeartbeat />, link: "/departments/cardiology" },
-  { id: 5, name: "Orthopedics", icon: <FaBone />, link: "/departments/orthopedics" },
-  { id: 6, name: "Ophthalmology", icon: <FaEye />, link: "/departments/ophthalmology" },
-  { id: 7, name: "Dental Care", icon: <FaTooth />, link: "/departments/dental" },
-  { id: 8, name: "Child Psychiatry", icon: <FaBrain />, link: "/departments/psychiatry" },
-  { id: 9, name: "Pulmonology", icon: <FaLungs />, link: "/departments/pulmonology" },
-  { id: 10, name: "Pathology Lab", icon: <FaMicroscope />, link: "/departments/pathology" },
+  { id: 1, name: "Surgery", icon: <FaProcedures />, link: "/departments/surgery" },
+  { id: 2, name: "Internal Medicine", icon: <FaStethoscope />, link: "/departments/medicine" },
+  { id: 3, name: "Pediatrics", icon: <FaChild />, link: "/departments/pediatrics" },
+  { id: 4, name: "Orthopedics", icon: <FaBone />, link: "/departments/orthopedics" },
+  { id: 5, name: "Gynecology & Obs.", icon: <FaFemale />, link: "/departments/gynecology" },
+  { id: 6, name: "Cardiology", icon: <FaHeartbeat />, link: "/departments/cardiology" },
+  { id: 7, name: "Dermatology & VD", icon: <FaAllergies />, link: "/departments/dermatology" },
+  { id: 8, name: "ENT", icon: <FaUserMd />, link: "/departments/ent" },
+  { id: 9, name: "Diabetology", icon: <FaTint />, link: "/departments/diabetology" },
+  { id: 10, name: "Neonatology (NICU)", icon: <FaBaby />, link: "/departments/neonatology" },
 ];
 
 export default function SpecialistDepartments() {
@@ -46,7 +46,7 @@ export default function SpecialistDepartments() {
         {/* 12-Card Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 md:gap-3.5">
           {departments.map((dept) => (
-            <Link 
+            <div 
               href={dept.link} 
               key={dept.id}
               className="group flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl border border-[#D3BFDF] transition-all duration-300 hover:-translate-y-2"
@@ -65,19 +65,19 @@ export default function SpecialistDepartments() {
               <div className="mt-auto w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#916BBF] group-hover:bg-[#916BBF] group-hover:text-white transition-all duration-300 transform group-hover:-rotate-45">
                 <HiOutlineArrowRight className="text-lg" />
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
         {/* 'View All' CTA Button */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Link 
             href="/departments"
             className="inline-flex items-center gap-2 bg-[#512D6D] text-white px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#35055a] transition-colors shadow-lg hover:shadow-xl"
           >
             All Services <HiOutlineArrowRight className="text-lg" />
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </section>
