@@ -79,7 +79,7 @@ export default function Footer() {
                 { name: "Our Doctors", path: "/doctors" },
                 { name: "All Departments", path: "/departments" },
                 { name: "Patient Testimonials", path: "/testimonials" },
-                { name: "News & Blogs", path: "/blog" },
+                { name: "News & Blogs", path: "/blogs" },
                 { name: "Contact Us", path: "/contact" }
               ].map((link, i) => (
                 <li key={i}>

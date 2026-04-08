@@ -5,9 +5,9 @@ import BlogSection from "../components/Home/BlogSection";
 import DoctorsSection from "../components/Home/DoctorsSection";
 import HeroSlider from "../components/Home/HeroSlider";
 import ServiceHighlights from "../components/Home/ServiceHighlights";
-import SpecialistDepartments from "../components/Home/SpecialistDepartments";
 import PatientReviews from "../components/Shared/PatientReviews";
 import WhyChooseUs from "../components/Shared/WhyChooseUs";
+import SpecialistDepartments from "../components/Shared/SpecialistDepartments";
 
 export default function HomePage() {
   return (
