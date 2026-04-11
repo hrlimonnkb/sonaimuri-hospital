@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaHospitalAlt, FaRegCalendarAlt, FaUserMd } from 'react-icons/fa';
 import AppointmentModal from './AppointmentModal';
+import Link from 'next/link';
 
 export default function DoctorGrid({ doctors }) {
   const [activeDoctor, setActiveDoctor] = useState(null);
@@ -36,7 +37,9 @@ export default function DoctorGrid({ doctors }) {
             {/* Name & Designation */}
             <div className="text-center mb-6 grow">
               <h3 className="text-xl md:text-2xl font-black text-[#512D6D] mb-2 leading-tight">
-                {doctor.name}
+                <Link href={`/doctors/${doctor.id}`}>
+                  {doctor.name}
+                </Link>
               </h3>
               <p className="text-gray-500 text-xs sm:text-sm font-medium leading-relaxed px-2 line-clamp-2">
                 {doctor.designation}
