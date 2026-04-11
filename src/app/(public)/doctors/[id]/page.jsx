@@ -30,7 +30,7 @@ export default function SingleDoctorPage() {
   }
 
   return (
-    <main className="bg-[#FAFAFE] pb-24">
+    <main className="pb-24">
       <PageHeader title={doctor.name} breadcrumb="Doctor Profile" />
 
       <div className="max-width-wrapper px-5 mt-10 md:mt-16">
