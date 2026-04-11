@@ -11,21 +11,15 @@ import { doctorsData } from '@/data/doctors';
 import PageHeader from '@/app/components/Shared/PageHeader';
 
 export default function SingleDoctorPage() {
-  // 1. Get the Doctor ID from the URL
   const params = useParams();
   const doctorId = parseInt(params.id);
-
-  // 2. Find the specific doctor from your data file
   const doctor = doctorsData.find(d => d.id === doctorId);
-
-  // 3. State for Accordions
   const [openSection, setOpenSection] = useState('bio');
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
   };
 
-  // If someone types a wrong ID in the URL, show this:
   if (!doctor) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#FAFAFE]">
@@ -41,9 +35,7 @@ export default function SingleDoctorPage() {
 
       <div className="max-width-wrapper px-5 mt-10 md:mt-16">
         
-        {/* --- TOP PROFILE HEADER CARD --- */}
         <div className="bg-white rounded-3xl p-6 md:p-10 shadow-lg border border-[#D3BFDF]/30 flex flex-col md:flex-row gap-8 items-center md:items-start mb-8 relative overflow-hidden">
-          {/* Decorative background circle */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F3E8FF] rounded-full mix-blend-multiply blur-3xl opacity-50 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
 
           {/* Doctor Image */}
@@ -59,7 +51,7 @@ export default function SingleDoctorPage() {
           </div>
 
           {/* Doctor Info */}
-          <div className="flex-grow text-center md:text-left z-10">
+          <div className="grow text-center md:text-left z-10">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
               <h1 className="text-2xl md:text-4xl font-black text-[#512D6D] flex items-center justify-center md:justify-start gap-2">
                 {doctor.name} <FaCheckCircle className="text-[#916BBF] text-xl" title="Verified Professional" />
@@ -89,7 +81,7 @@ export default function SingleDoctorPage() {
         {/* --- TWO COLUMN LAYOUT --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
-          {/* LEFT COLUMN: Accordions & Details (Span 8) */}
+          {/* LEFT COLUMN */}
           <div className="lg:col-span-8 space-y-4">
             
             {/* Accordion 1: Short Bio */}
@@ -103,7 +95,6 @@ export default function SingleDoctorPage() {
               </button>
               {openSection === 'bio' && (
                 <div className="p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
-                  {/* Using designation as a fallback bio since you don't have a full bio in your data yet */}
                   {doctor.name} is a highly respected specialist in the field of {doctor.department}. With a dedication to patient care and advanced medical practices, they serve the community at {doctor.hospital}. 
                   <br /><br />
                   Qualifications: {doctor.designation}
@@ -159,9 +150,9 @@ export default function SingleDoctorPage() {
 
           {/* RIGHT COLUMN: Sticky Sidebar (Span 4) */}
           <div className="lg:col-span-4 relative">
-            <div className="sticky top-28 space-y-6"> {/* sticky top-28 makes it follow you as you scroll! */}
+            <div className="sticky top-28 space-y-6">
               
-              {/* Box 1: Basic Info (Dark Theme) */}
+              {/* Box 1 */}
               <div className="bg-[#512D6D] text-white rounded-3xl p-6 shadow-xl">
                 <h3 className="text-lg font-black border-b border-white/20 pb-4 mb-4">Basic Information</h3>
                 
@@ -227,10 +218,8 @@ export default function SingleDoctorPage() {
                   BOOK APPOINTMENT
                 </Link>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </main>
