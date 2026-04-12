@@ -12,8 +12,8 @@ import PageHeader from '@/app/components/Shared/PageHeader';
 
 export default function SingleDoctorPage() {
   const params = useParams();
-  const doctorId = parseInt(params.id);
-  const doctor = doctorsData.find(d => d.id === doctorId);
+  const doctorSlug = params.slug;
+  const doctor = doctorsData.find(d => d.slug === doctorSlug);
   const [openSection, setOpenSection] = useState('bio');
 
   const toggleSection = (section) => {
@@ -39,11 +39,11 @@ export default function SingleDoctorPage() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F3E8FF] rounded-full mix-blend-multiply blur-3xl opacity-50 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
 
           {/* Doctor Image */}
-          <div className="w-32 h-32 md:w-48 md:h-48 shrink-0 rounded-full border-4 border-[#F3E8FF] overflow-hidden relative bg-gray-50 flex items-center justify-center shadow-inner">
+          <div className="w-32 h-32 shrink-0 rounded-full border-4 border-[#F3E8FF] overflow-hidden relative bg-gray-50 flex items-center justify-center shadow-inner">
             <FaUserMd className="text-6xl text-gray-300 absolute" />
             <Image 
               src={doctor.image} 
-              alt={doctor.name}
+              // alt={doctor.name}
               fill
               sizes="(max-width: 768px) 128px, 192px"
               className="object-cover relative z-10"
@@ -94,7 +94,7 @@ export default function SingleDoctorPage() {
                 {openSection === 'bio' ? <FaChevronUp className="text-[#916BBF]" /> : <FaChevronDown className="text-gray-400" />}
               </button>
               {openSection === 'bio' && (
-                <div className="p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
+                <div className="p-6 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
                   {doctor.name} is a highly respected specialist in the field of {doctor.department}. With a dedication to patient care and advanced medical practices, they serve the community at {doctor.hospital}. 
                   <br /><br />
                   Qualifications: {doctor.designation}
@@ -112,7 +112,7 @@ export default function SingleDoctorPage() {
                 {openSection === 'treatments' ? <FaChevronUp className="text-[#916BBF]" /> : <FaChevronDown className="text-gray-400" />}
               </button>
               {openSection === 'treatments' && (
-                <div className="p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
+                <div className="p-6 text-gray-600 text-sm leading-relaxed border-t border-gray-50">
                   <ul className="list-disc list-inside space-y-2">
                     <li>Comprehensive {doctor.department} Consultations</li>
                     <li>Advanced Diagnostic Evaluations</li>
@@ -133,7 +133,7 @@ export default function SingleDoctorPage() {
                 {openSection === 'faq' ? <FaChevronUp className="text-[#916BBF]" /> : <FaChevronDown className="text-gray-400" />}
               </button>
               {openSection === 'faq' && (
-                <div className="p-6 pt-0 text-gray-600 text-sm leading-relaxed border-t border-gray-50 space-y-4">
+                <div className="p-6 text-gray-600 text-sm leading-relaxed border-t border-gray-50 space-y-4">
                   <div>
                     <h4 className="font-bold text-gray-800">When does the doctor see patients?</h4>
                     <p>The doctor is available {doctor.schedule}.</p>
@@ -183,7 +183,7 @@ export default function SingleDoctorPage() {
                     </div>
                     <div>
                       <p className="text-xs text-[#D3BFDF] font-bold uppercase tracking-wider mb-1">Gender</p>
-                      <p className="font-semibold text-sm capitalize">Not Specified</p>
+                      <p className="font-semibold text-sm capitalize">{doctor.gender ? doctor.gender : "Not Specified"}</p>
                     </div>
                   </div>
                 </div>

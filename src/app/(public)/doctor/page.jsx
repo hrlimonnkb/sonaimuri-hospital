@@ -6,7 +6,7 @@ import PageHeader from '@/app/components/Shared/PageHeader';
 
 export default function DoctorsPage() {
   return (
-    <main className="pb-24">
+    <main>
       
       {/* --- REUSABLE PAGE HEADER --- */}
       <PageHeader 
@@ -15,8 +15,8 @@ export default function DoctorsPage() {
       />
 
       {/* --- DOCTORS GRID SECTION --- */}
-      <div className='px-5'>
-         <div className="max-width-wrapper relative z-20 mt-16 md:mt-24">
+      <div className="py-14 lg:py-20 px-5">
+         <div className="max-width-wrapper relative z-20">
         <div className="text-center mb-16">
           <span className="text-[#916BBF] font-bold text-xs md:text-sm uppercase tracking-[0.3em] block mb-3">
             Medical Board

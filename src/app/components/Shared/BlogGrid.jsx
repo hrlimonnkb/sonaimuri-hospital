@@ -36,7 +36,7 @@ export default function BlogGrid({ blogs }) {
             </div>
             
             <h3 className="text-xl font-black text-[#512D6D] mb-3 leading-snug group-hover:text-[#916BBF] transition-colors line-clamp-2">
-              <Link href={blog.slug} className="before:absolute before:inset-0">
+              <Link href={`/blog/${blog.slug}`} className="before:absolute before:inset-0">
                 {blog.title}
               </Link>
             </h3>

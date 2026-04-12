@@ -102,7 +102,7 @@ export default function HeroSlider() {
                   </Link>
 
                   <Link
-                    href="/doctors"
+                    href="/doctor"
                     className="w-full sm:w-auto backdrop-blur-md border-2 border-white/40 text-white px-6 md:px-10 py-3 md:py-4 rounded-lg font-black text-xs md:text-sm hover:bg-white hover:text-[#512D6D] transition-all flex items-center justify-center gap-2"
                   >
                     <FaUserMd className="text-lg" /> FIND DOCTOR

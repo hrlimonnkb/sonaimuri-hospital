@@ -9,7 +9,7 @@ export default function DoctorsSection() {
   const featuredDoctors = doctorsData.slice(0, 6);
 
   return (
-    <section className="py-24 bg-[#FAFAFE] relative px-5">
+    <section className="py-14 lg:py-20 bg-[#FAFAFE] relative px-5">
       <div className="max-width-wrapper">
         
         <div className="text-center mb-16">

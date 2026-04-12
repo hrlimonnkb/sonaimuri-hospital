@@ -37,7 +37,7 @@ export default function DoctorGrid({ doctors }) {
             {/* Name & Designation */}
             <div className="text-center mb-6 grow">
               <h3 className="text-xl md:text-2xl font-black text-[#512D6D] mb-2 leading-tight">
-                <Link href={`/doctors/${doctor.id}`}>
+                <Link href={`/doctor/${doctor.slug}`}>
                   {doctor.name}
                 </Link>
               </h3>

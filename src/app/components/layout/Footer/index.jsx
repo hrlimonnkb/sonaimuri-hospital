@@ -76,11 +76,10 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-[#D3BFDF]">
               {[
                 { name: "About Us", path: "/about" },
-                { name: "Our Doctors", path: "/doctors" },
+                { name: "Our Doctors", path: "/doctor" },
                 { name: "All Departments", path: "/departments" },
-                { name: "Patient Testimonials", path: "/testimonials" },
-                { name: "News & Blogs", path: "/blogs" },
-                { name: "Contact Us", path: "/contact" }
+                { name: "Patient Testimonials", path: "/#testimonials" },
+                { name: "News & Blogs", path: "/blog" }
               ].map((link, i) => (
                 <li key={i}>
                   <Link href={link.path} className="flex items-center gap-2 hover:text-white hover:translate-x-2 transition-all duration-300">
@@ -94,17 +93,16 @@ export default function Footer() {
           {/* Departments */}
           <div>
             <h3 className="text-lg font-bold mb-6 relative inline-block">
-              Departments
+              Others Link
               <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-[#916BBF] rounded-full"></span>
             </h3>
             <ul className="space-y-3 text-sm text-[#D3BFDF]">
               {[
-                { name: "Gynecology & Obstetrics", path: "/departments/gynecology" },
-                { name: "Neonatology (NICU)", path: "/departments/neonatology" },
-                { name: "Pediatrics & Child Care", path: "/departments/pediatrics" },
-                { name: "Internal Medicine", path: "/departments/medicine" },
-                { name: "Cardiology", path: "/departments/cardiology" },
-                { name: "Pathology & Diagnostics", path: "/departments/pathology" }
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms & Condition", path: "terms-and-conditions" },
+                { name: "Disclaimer", path: "/disclaimer" },
+                { name: "Contact Us", path: "/contact" },
+                { name: "Diagnostic", path: "/diagnostic" },
               ].map((link, i) => (
                 <li key={i}>
                   <Link href={link.path} className="flex items-center gap-2 hover:text-white hover:translate-x-2 transition-all duration-300">

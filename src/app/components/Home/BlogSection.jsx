@@ -9,7 +9,7 @@ export default function BlogSection() {
   const latestBlogs = blogsData.slice(0, 3);
 
   return (
-    <section className="py-24 relative px-5">
+    <section className="py-14 lg:py-20 relative px-5">
       <div className="max-width-wrapper">
         
         {/* Section Header */}

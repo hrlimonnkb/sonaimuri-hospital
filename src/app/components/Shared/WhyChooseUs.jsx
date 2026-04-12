@@ -34,7 +34,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 overflow-hidden px-5">
+    <section className="py-14 lg:py-24 overflow-hidden px-5">
       <div className="max-width-wrapper">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           

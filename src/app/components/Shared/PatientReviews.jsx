@@ -52,7 +52,7 @@ const reviews = [
 
 export default function PatientReviews() {
   return (
-    <section className="py-24 bg-[#FAFAFE] relative overflow-hidden px-5">
+    <section id='testimonials' className="py-14 lg:py-24 bg-[#FAFAFE] relative overflow-hidden px-5">
       <div className="max-width-wrapper relative z-10">
         
         {/* Section Header */}

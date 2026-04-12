@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function DepartmentsPage() {
   return (
-    <main className="pb-20">
+    <main>
       <PageHeader 
         title="Our Departments" 
         breadcrumb="Departments" 

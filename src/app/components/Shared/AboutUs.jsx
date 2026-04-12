@@ -36,7 +36,7 @@ const clinicalFeatures = [
 
 export default function AboutUs() {
   return (
-    <section className="py-24 bg-[#FAFAFE] relative px-5">
+    <section className="py-14 lg:py-24 bg-[#FAFAFE] relative px-5">
       <div className="max-width-wrapper">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           

@@ -29,7 +29,7 @@ const departments = [
 
 export default function SpecialistDepartments({ hideHeader = false }) {
   return (
-    <section className="py-20 px-5">
+    <section className="py-14 lg:py-20 px-5">
       <div className="max-width-wrapper">
         
         {/* Section Header - Only shows if hideHeader is false */}

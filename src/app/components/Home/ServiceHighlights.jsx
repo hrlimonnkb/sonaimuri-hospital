@@ -44,8 +44,7 @@ export default function ServiceHighlights() {
       <div className="max-width-wrapper">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item) => (
-            <Link 
-              href={item.link} 
+            <div 
               key={item.id}
               className="group relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-gray-100"
             >
@@ -69,7 +68,7 @@ export default function ServiceHighlights() {
                 {/* Subtle underline effect on hover */}
                 <div className={`w-0 h-1 mt-4 rounded-full bg-linear-to-r ${item.color} group-hover:w-16 transition-all duration-500`}></div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

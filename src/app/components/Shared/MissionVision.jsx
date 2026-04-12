@@ -6,7 +6,7 @@ import missionImage from "@/assets/images/mission-image.jpeg";
 
 export default function MissionVision() {
   return (
-    <section className="py-24 relative overflow-hidden px-5">
+    <section className="py-14 lg:py-24 relative overflow-hidden px-5">
       
       <div className="max-width-wrapper relative z-10">
         

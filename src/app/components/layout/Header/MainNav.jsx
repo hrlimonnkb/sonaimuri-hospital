@@ -5,13 +5,6 @@ import Image from 'next/image';
 import { HiOutlineArrowRight, HiMenu, HiX } from 'react-icons/hi';
 import logoImage from "@/assets/images/logo.png";
 
-const SERVICES_LIST = [
-  { name: "Maternity Care", href: "/services/maternity" },
-  { name: "Pediatrics", href: "/services/pediatrics" },
-  { name: "Vaccination", href: "/services/vaccination" },
-  { name: "Diagnostic Lab", href: "/services/diagnostic" },
-];
-
 export default function MainNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -36,10 +29,11 @@ export default function MainNav() {
         {/* --- DESKTOP NAV --- */}
         <div className="hidden lg:flex items-center gap-8 font-bold text-[13px] text-gray-600">
           <Link href="/" className="hover:text-[#512D6D]">HOME</Link>
-          <Link href="/doctors" className="hover:text-[#512D6D]">DOCTORS</Link>
+          <Link href="/doctor" className="hover:text-[#512D6D]">DOCTORS</Link>
           <Link href="/departments" className="hover:text-[#512D6D] transition-colors">DEPARTMENTS</Link>
           <Link href="/about" className="hover:text-[#512D6D]">ABOUT</Link>
           <Link href="/contact" className="hover:text-[#512D6D]">CONTACT</Link>
+          <Link href="/diagnostic" className="hover:text-[#512D6D]">DIAGNOSTIC</Link>
         </div>
 
         {/* --- ACTIONS --- */}
@@ -90,10 +84,11 @@ export default function MainNav() {
           
           <div className="flex flex-col gap-5 font-bold text-gray-600 text-sm">
             <Link href="/" onClick={closeMenus}>HOME</Link>
-            <Link href="/doctors" onClick={closeMenus}>DOCTORS</Link>
+            <Link href="/doctor" onClick={closeMenus}>DOCTORS</Link>
             <Link href="/departments" onClick={closeMenus} className="hover:text-[#512D6D] transition-colors">DEPARTMENTS</Link>
             <Link href="/about" onClick={closeMenus}>ABOUT US</Link>
             <Link href="/contact" onClick={closeMenus}>CONTACT</Link>
+            <Link href="/diagnostic" onClick={closeMenus}>DIAGNOSTIC</Link>
             <hr className="my-4 border-[#D3BFDF]" />
             <Link href="tel:+8801705319271" className="bg-[#512d6d] text-white p-4 rounded-lg text-center shadow-lg shadow-purple-100" onClick={closeMenus}>
               BOOK APPOINTMENT
