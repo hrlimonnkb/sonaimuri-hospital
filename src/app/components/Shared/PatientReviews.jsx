@@ -4,48 +4,53 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { FaStar, FaQuoteRight } from 'react-icons/fa';
+import borhanImage from "@/assets/images/borhan.png";
+import kamrulImage from "@/assets/images/kamrul.png"; 
+import rubelImage from "@/assets/images/rubel.jpeg";
+import asadImage from "@/assets/images/shiblu.png";
+import shawonImage from "@/assets/images/shawon.png";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 const reviews = [
   {
     id: 1,
-    name: "Fatema Begum",
-    type: "Maternity Patient",
-    text: "The doctors and nurses here are incredibly caring. During my delivery, I felt completely safe. The labor ward is modern and the postpartum care was exceptional.",
-    image: null,
+    name: "Borhan Uddin",
+    type: "Regular Checkup",
+    text: "I visited for a routine health checkup. The process was very smooth, and the doctors were highly professional. They took the time to explain all my test reports clearly.",
+    image: borhanImage,
     rating: 5,
   },
   {
     id: 2,
-    name: "Abdur Rahman",
+    name: "Kamrul Hasan",
     type: "Father (NICU Patient)",
-    text: "When our newborn needed NICU support, we were terrified. The pediatric specialists here saved our baby's life. We are forever grateful to Sonaimuri Ma O Shishu Hospital.",
-    image: null,
+    text: "When our newborn needed NICU support, we were terrified. The pediatric specialists here saved our baby's life. We are forever grateful to Sonaimuri Maa O Shishu Hospital.",
+    image: kamrulImage,
     rating: 5,
   },
   {
     id: 3,
-    name: "Sumaiya Akhter",
+    name: "Yasin Hamid Rubel",
     type: "Regular Checkup",
-    text: "I regularly bring my 2-year-old here for vaccinations and checkups. The environment is very child-friendly, and the doctors take their time to explain everything.",
-    image: null,
+    text: "The consultation was excellent. I came in for some general weakness and routine tests. The doctor was very patient, listened to my concerns, and prescribed a highly effective routine.",
+    image: rubelImage,
     rating: 4,
   },
   {
     id: 4,
-    name: "Nazma Islam",
-    type: "Gynecology Patient",
-    text: "Outstanding service. The hospital is exceptionally clean, and the staff is very well-behaved. The specialist doctor correctly diagnosed my issue on the first visit.",
-    image: null,
+    name: "Asaduzzaman",
+    type: "Regular Checkup",
+    text: "Outstanding service. The hospital is exceptionally clean, and the staff is very well-behaved. The specialist doctor accurately evaluated my health and answered all my questions during the visit.",
+    image: asadImage,
     rating: 5,
   },
   {
     id: 5,
-    name: "Karim Shaheb",
-    type: "Pediatric Patient Parent",
-    text: "My son had severe pneumonia. The emergency support and immediate admission process were flawless. He recovered fully within a week thanks to the expert doctors.",
-    image: null,
+    name: "Shawon Barua",
+    type: "Regular Checkup",
+    text: "Booking a regular checkup here was completely hassle-free. I got all my lab tests done quickly, and the diagnostic center is equipped with top-notch technology. Highly recommended.",
+    image: shawonImage,
     rating: 5,
   }
 ];
