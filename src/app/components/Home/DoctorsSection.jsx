@@ -26,7 +26,7 @@ export default function DoctorsSection() {
         {/* Show More Button */}
         <div className="mt-16 text-center">
           <Link 
-            href="/doctors"
+            href="/doctor"
             className="inline-flex items-center gap-2 bg-[#512D6D] text-white px-8 py-4 rounded-lg font-black text-sm uppercase tracking-widest hover:bg-[#35055a] transition-colors shadow-lg hover:shadow-xl"
           >
             SHOW ALL DOCTORS <HiOutlineArrowRight className="text-xl" />

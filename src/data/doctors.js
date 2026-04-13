@@ -154,5 +154,30 @@ export const doctorsData = [
       new: "500 TK",
       followUp: "300 TK"
     }
+  },
+  {
+    id: 7,
+    name: "Dr. Md. Khaled Saifullah",
+    slug: "dr-md-khaled-saifullah",
+    department: "Neurosurgery",
+    designation: "MBBS (RU), FCPS (Neurosurgery) - Final Part, MS (Neurosurgery) - Resident. Department of Neurosurgery, Dhaka Medical College Hospital.",
+    hospital: "Sonaimuri Maa O Shishu Hospital",
+    schedule: "Contact Hospital for Schedule",
+    image: null,
+    experience: "7+ Years",
+    gender: "Male",
+    phone: "01705-319271",
+    email: "khaledsaifullah1000@gmail.com",
+    bio: "Dr. Md. Khaled Saifullah is a highly dedicated neurosurgeon with extensive training at Dhaka Medical College Hospital. He specializes in treating complex brain, spinal cord, and nerve disorders, providing expert surgical and non-surgical care for patients with neurological conditions.",
+    treatments: [
+      "Head & Spinal Trauma Management",
+      "Brain Tumor & Stroke Surgery",
+      "Spinal Disc Herniation (Sciatica)",
+      "Peripheral Nerve Surgery"
+    ],
+    fees: {
+      new: "800 TK",
+      followUp: "500 TK"
+    }
   }
 ];
