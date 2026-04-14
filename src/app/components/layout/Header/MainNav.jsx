@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HiOutlineArrowRight, HiMenu, HiX } from 'react-icons/hi';
-import logoImage from "@/assets/images/logo.png";
+import logoImage from "@/assets/images/MCHP-Logo.png";
 
 export default function MainNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function MainNav() {
         
         {/* --- LOGO SECTION --- */}
         <Link href="/" className="flex items-center gap-1">
-          <div className="relative w-12 h-12 md:w-16 md:h-16">
+          <div className="relative w-10 h-10 md:w-16 md:h-16">
              <Image src={logoImage} alt="Hospital Logo" fill className="object-contain" priority />
           </div>
           <div className="flex flex-col">

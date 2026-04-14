@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import footerLogo from "@/assets/images/footerLogo.png";
+import footerLogo from "@/assets/images/MCHP-Logo-white.png";
 import { 
   FaFacebookF, 
   FaYoutube, 
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="space-y-6">
             
             <Link href="/" className="items-center gap-3 mb-4 group inline-flex">
-              <div className="relative w-14 h-14 md:w-16 md:h-16 shrink-0 bg-white rounded-full p-1 shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div className="relative w-14 h-14 md:w-16 md:h-16 p-1">
                 <Image 
                   src={footerLogo}
                   alt="Sonaimuri Maa O Shishu Hospital Logo"
